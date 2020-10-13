@@ -44,7 +44,8 @@ function Center(props) {
                         </Card.Title>
                         <Card.Text className="my-3" style={styles.text}>
                             <div>
-                                F.P ENGINEERING STUDENT {'&'}<br />
+                                F.P ENGINEERING STUDENT 
+                                {/* {'&'}<br /> */}
                                 {/* FULL-STACK DEVELOPER (Web {'&'} Apps) */}
                             </div>
                             <Card.Link target="_blank" href="https://drive.google.com/file/d/1_pjUr5w-fDmAD_LpEFV6XuvJeydFFKxt/view?usp=sharing">
