@@ -48,7 +48,7 @@ function Center(props) {
                                 {/* {'&'}<br /> */}
                                 {/* FULL-STACK DEVELOPER (Web {'&'} Apps) */}
                             </div>
-                            <Card.Link target="_blank" href="https://drive.google.com/file/d/1_pjUr5w-fDmAD_LpEFV6XuvJeydFFKxt/view?usp=sharing">
+                            <Card.Link target="_blank" href="https://drive.google.com/file/d/1vl_USL1y0HtcktoBRt2yWjVrfoupBxei/view?usp=drivesdk">
                                 <button className="mt-3 btn" type="button"
                                     style={{ backgroundColor: "#FD5F00", color: "#fff", height: "3em", width: "10.5em" }}
                                 >
