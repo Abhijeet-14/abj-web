@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import { css, jsx, keyframes } from "@emotion/core";
+import { css, jsx } from "@emotion/core";
 
 // Lottie Animation:
 
@@ -15,7 +15,7 @@ import Cross3 from "../shared/cross3.png";
 // window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
 
 function Header(props) {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = React.useState(false);
   const proj = 0;
   const toggleMenu = () => {
     setMenu(!menu);
@@ -106,20 +106,6 @@ function Header(props) {
 }
 
 export default Header;
-
-const fadeMenu = keyframes`
-  from 0% {
-      opacity: 0
-  }
-
-  50% {
-      opacity: 0.8
-  }
-
-  100% {
-    opacity: 1
-  }
-`;
 
 const styles = {
   container: css({

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, makeStyles } from "@material-ui/core";
+import {  makeStyles } from "@material-ui/core";
 import parse from "html-react-parser";
 import db from "../db/db.json";
 
@@ -20,6 +20,7 @@ export default function Projects() {
                 <a
                   href={val?.appLink}
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   {val.title}{" "}
@@ -28,6 +29,7 @@ export default function Projects() {
                   <a
                     href={val?.appLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
                     <LanguageIcon />
@@ -35,6 +37,7 @@ export default function Projects() {
                   <a
                     href={val?.githubLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
                     <GitHubIcon />

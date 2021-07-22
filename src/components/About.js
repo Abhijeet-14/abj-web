@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Row, CardGroup, Card, Image } from "react-bootstrap";
+import { Container, Col, Row, Card } from "react-bootstrap";
 import parse from "html-react-parser";
 
 // import profile from "../shared/profile1.jpeg";
@@ -18,7 +18,7 @@ export default function About(props) {
   );
 
   return (
-    <Container className="py-5 mt-0" id="about" fluid>
+    <Container className="py-5 mt-0" id="about" fluid style={{scrollBehavior: "smooth"}}>
       <h2 className="my-4 d-flex justify-content-center" style={styles.about}>
         {" "}
         ABOUT ME
@@ -41,7 +41,7 @@ export default function About(props) {
             <Col className="w-25 col-3 my-auto text-center">
               <img
                 src={profile}
-                alt="Profile Image"
+                alt="Profile_Image"
                 className="rounded-circle float-right block-example border border-warning"
                 width="100%"
               />
@@ -56,7 +56,7 @@ export default function About(props) {
               <div className="mx-auto text-center">
                 <img
                   src={profile}
-                  alt="Profile Image"
+                  alt="Profile_Image"
                   border="primary"
                   className=" rounded-circle block-example border border-warning"
                   width="50%"

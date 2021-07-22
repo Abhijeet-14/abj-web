@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, Button, Row, Col, CardGroup } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 
 import About from "./About";
 import Software from "./Software";
@@ -24,18 +24,16 @@ function Center(props) {
     software: 0,
   });
 
-  useEffect(
-    () =>
-      props.windowWidth < 588
-        ? setOpen({ ...open, proImg: 0 })
-        : setOpen({ ...open, proImg: 1 }),
-    [props.windowWidth]
-  );
+  useEffect(() => {
+    props.windowWidth < 588
+      ? setOpen({ ...open, proImg: 0 })
+      : setOpen({ ...open, proImg: 1 });
+  }, [props.windowWidth]);
 
   return (
     <Container
       fluid
-      style={styles.container}
+      style={{ backgronudColor: "#F9F8EB", scrollBehavior: "smooth" }}
       className="smooth-scroll"
       id="home"
     >
@@ -109,31 +107,22 @@ function Center(props) {
 }
 
 const styles = {
-  container: {
-    backgronudColor: "#F9F8EB",
-  },
-  row: {},
-  col: {},
   card: {
     backgroundColor: "#F9F8EB",
   },
-  body: {},
   title: {
-    // backgroundColor: "yellow",
     fontFamily: "Product Sans , Arial",
     fontSize: "55px",
     fontWeight: "bold",
     textAlign: "center",
     color: "#05004E",
   },
-  subtitle: {},
   text: {
     fontFamily: "Product Sans , Arial",
     fontSize: "22px",
     fontWeight: "bold",
     textAlign: "center",
     color: "#05004E",
-    // backgroundColor: "pink"
   },
   link: {
     fontFamily: "Product Sans , Arial",

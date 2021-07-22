@@ -8,8 +8,8 @@ export default function Software() {
   return (
     <Container
       className="py-5 mt-0"
-      id="languages"
       style={{ backgroundColor: "" }}
+      id="languages"
     >
       <h2
         className="my-4 d-flex justify-content-center"
