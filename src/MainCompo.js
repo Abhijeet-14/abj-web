@@ -26,9 +26,7 @@ function Main() {
         <React.Fragment>
             <Router>
                 <Switch>
-
                     <Route exact path='/' component={Home} />
-
                     <Redirect to="/" />
                 </Switch>
             </Router>
