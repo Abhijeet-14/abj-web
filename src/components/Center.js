@@ -53,7 +53,11 @@ function Center(props) {
             </Card.Title>
             <Card.Text className="my-3" style={styles.text}>
               <div>FULL-STACK DEVELOPER ( Web )</div>
-              <Card.Link target="_blank" href={db?.resume}>
+              <Card.Link
+                target="_blank"
+                href={db?.resume}
+                rel="noopener noreferrer"
+              >
                 <button
                   className="mt-3 btn"
                   type="button"
@@ -73,12 +77,14 @@ function Center(props) {
                 href={db?.socialMedia[0].link}
                 target="_blank"
                 style={styles.link}
+                rel="noopener noreferrer"
               >
                 <img src={In} alt="LinkedIN" />
               </Card.Link>
               <Card.Link
                 href={db?.socialMedia[1].link}
                 target="_blank"
+                rel="noopener noreferrer"
                 style={styles.link}
               >
                 <img
@@ -90,6 +96,7 @@ function Center(props) {
               <Card.Link
                 href={db?.socialMedia[2].link}
                 target="_blank"
+                rel="noopener noreferrer"
                 style={styles.link}
               >
                 <img src={Yt} alt="YouTube" />
