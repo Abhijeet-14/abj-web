@@ -1,86 +1,98 @@
-import React from 'react'
-import { Container, Col, Row, CardGroup, Card } from 'react-bootstrap'
-import styled from '@emotion/styled'
+import React from "react";
+import { Link, makeStyles } from "@material-ui/core";
+import parse from "html-react-parser";
+import db from "../db/db.json";
 
+import LanguageIcon from "@material-ui/icons/Language";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 export default function Projects() {
-    return (
-        <Container className="py-5" id="projects" style={{ backgroundColor: "" }}>
-            <h2 className="my-4 d-flex justify-content-center" style={styles.software}>PROJECTS</h2>
-            <hr />
-            <Row className="mt-5">
-                <Col>
-                    <CardGroup className="mx-auto" style={styles}>
-                        <Card className="mt-sm-0 mt-md-2 ml-3 mr-4 mr-sm-5 ml-sm-5">
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                        </Card>
-                        <Card className=" mt-sm-5 mt-md-2 ml-3 mr-4 mr-sm-5 ml-sm-5">
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                        </Card>
-                    </CardGroup>
-                </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-0">
-                <Col>
-                    <CardGroup>
-                        <Card className="mt-sm-5 mt-md-2 ml-3 mr-4 mr-sm-5 ml-sm-5">
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                        </Card>
-                        <Card className="mt-sm-5 mt-md-2 ml-3 mr-4 mr-sm-5 ml-sm-5">
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                        </Card>
-                    </CardGroup>
-                </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-0">
-                <Col>
-                    <CardGroup>
-                        <Card className="mt-sm-5 mt-md-2 ml-3 mr-4 mr-sm-5 ml-sm-5">
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                        </Card>
-                        <Card className="mt-sm-5 mt-md-2 ml-3 mr-4 mr-sm-5 ml-sm-5">
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                        </Card>
-                    </CardGroup>
-                </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-0">
-                <Col>
-                    <CardGroup>
-                        <Card className="mt-sm-5 mt-md-2 ml-3 mr-4 mr-sm-5 ml-sm-5">
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                        </Card>
-                        <Card className="mt-sm-5 mt-md-2 ml-3 mr-4 mr-sm-5 ml-sm-5">
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                            qwertyuiop<br />
-                        </Card>
-                    </CardGroup>
-                </Col>
-            </Row>
-        </Container>
-    )
+  const classes = useStyles();
+  return (
+    <>
+      <div id="projects">
+        <h2 className={classes.root}>PROJECTS</h2>
+        <hr />
+        <div className={classes.projects}>
+          {db?.projects.map((val) => (
+            <div className={classes.card}>
+              <h2>
+                <a
+                  href={val?.appLink}
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  {val.title}{" "}
+                </a>
+                <span className={classes.appLink}>
+                  <a
+                    href={val?.appLink}
+                    target="_blank"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <LanguageIcon />
+                  </a>
+                  <a
+                    href={val?.githubLink}
+                    target="_blank"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <GitHubIcon />
+                  </a>
+                </span>
+              </h2>
+              <i>
+                <p>{val.subTitle}</p>
+                <p>{parse(val.contents)}</p>
+                <p>
+                  <b>Tech Stack: </b> {val.techStack}
+                </p>
+              </i>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
-
-const styles = {
-    software: {
-        fontFamily: "Arial",
-        fontSize: "32px",
-        fontWeight: "bold",
-        color: "#05004E"
-    }
-}
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "4  0",
+    fontFamily: "Arial",
+    fontSize: "32px",
+    fontWeight: "bold",
+    color: "#05004E",
+  },
+  projects: {
+    display: "flex",
+    justifyContent: "center",
+    flexFlow: "row wrap",
+  },
+  card: {
+    textOverflow: "wrap",
+    width: "48rem",
+    padding: "1rem",
+    borderRadius: "1rem",
+    margin: "2rem",
+    [theme.breakpoints.up("sm")]: {
+      width: "24rem",
+      margin: "2rem",
+    },
+    [theme.breakpoints.up("md")]: {
+      margin: "3rem",
+    },
+    lineHeight: "1.5rem",
+    backgroundColor: "#dfe1e48c",
+    boxShadow: " 0 0 5px 5px rgb(0 0 0 / 0.1)",
+  },
+  appLink: {
+    flex: 1,
+    display: "flex",
+    float: "right",
+    alignItems: "center",
+    margin: "0 1rem",
+    gap: "1.2rem",
+  },
+}));

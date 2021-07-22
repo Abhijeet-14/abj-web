@@ -1,0 +1,64 @@
+{
+  "resume": "https://drive.google.com/file/d/1gDhI8WDOuPsuRLnou_-oHMlm5aviGt7v/view?usp=sharing",
+  "socialMedia": [
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/abhijeet-kumar-208478163/"
+    },
+    { "name": "Github", "link": "https://github.com/Abhijeet-14" },
+    {
+      "name": "YouTube",
+      "link": "https://www.youtube.com/channel/UCyhChkyobpFvtqQATIMM9xQ?view_as=subscriber"
+    }
+  ],
+  "education": {
+    "name": "National Institute of Technology, Rourkela",
+    "year": "2017-2021",
+    "link": "https://nitrkl.ac.in"
+  },
+  "aboutMe": {
+    "title": "Software Developer",
+    "contents": [
+      {
+        "content": "I pursued B.TECH from department of Food Process Engineering, <a href=\"https://nitrkl.ac.in\" target=\"_blank\" ><strong style=\"color: #05004e;\">National Institute of Technology, Rourkela.</strong></a> <br />"
+      },
+      {
+        "content": "I have 1+ years of experience of building websites and front-end applications with major as JavaScript. Being fascinated towards software and websites from my early age, I started practicing web development in my 2nd year of college, and I'm able to see this beautiful world of web.<br />"
+      },
+      {
+        "content": "Currently working as a Software Developer at <a href=\"https://hashedin.com\" target=\"_blank\"><b style=\"color: #05004e;\">Hashedin by deloitte</b></a>, builds deep tech SAAS products and platforms. <br />"
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Phone",
+        "detail": "+91 7209428890"
+      },
+      {
+        "name": "Email",
+        "detail": "<a href=\"mailto:abhijeet.rts@gmail.com\" target=\"_blank\" style=\"color: #05004e;\">abhijeet.rts@gmail.com<a>"
+      }
+    ]
+  },
+  "software": " Node.Js | Java <br /> JavaScript | React.Js <br /> HTML5 | CSS  <br />",
+  "projects": [
+    {
+      "title": "Spotiffy",
+      "subTitle": "A clone of Spotify Web App",
+      "appLink": "https://spotiffy.netlify.app",
+      "githubLink": "https://github.com/Abhijeet-14/CloneSpotify",
+      "techStack": "ReactJs, Hooks (as State Management), HTML and CSS, Spotify Web API",
+      "contents": "• A Clone of Spotify Web App, created by using Spotify Web API and Web Playback SDK. <br />• Features: User details, Search, Your Library, Playback Player and its controls (requires Premium account). ",
+      "private": false
+    },
+    {
+      "title": "News In Seconds",
+      "subTitle": "An online News-paper with modern Instagram layout ",
+      "appLink": "https://nis1.netlify.app",
+      "githubLink": "https://github.com/Abhijeet-14/news_in_seconds",
+      "techStack": " NodeJs, AWS Lambda, ReactJs, Hooks (as State Management), S3 Bucket, HTML, CSS",
+      "contents": "• A News website, created to provide Local, National and International news in both Hindi and English Language. • Given management access with Admin, SuperAdmin or User through Auth0 services.",
+      "private": true
+    }
+  ]
+}

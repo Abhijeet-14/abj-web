@@ -11,6 +11,7 @@ import Center from './components/Center'
 
 
 function Home() {
+    
     return (
         <React.Fragment>
             <Container fluid="100%" style={{ backgroundColor: "#F9F8EB" }}>
