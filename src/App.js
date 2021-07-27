@@ -7,14 +7,14 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 const LazyMain = React.lazy(() => import("./MainCompo"));
 
-const Visitors = () => (
+const Visitors = ({ visitors }) => (
   <button
     style={{
       postion: "relative",
     }}
     title="No. of Visitors"
   >
-    <b style={styles.visitors}>4</b>
+    <b style={styles.visitors}>{visitors}</b>
   </button>
 );
 
@@ -34,7 +34,7 @@ function App() {
       setVisitors(data?.feed?.entry[1]?.content?.$t);
     })();
   }, []);
-  console.log(process.env);
+
   return (
     <div style={{ margin: 0, padding: 0 }}>
       <Suspense
@@ -46,7 +46,7 @@ function App() {
         }
       >
         <LazyMain />
-        {visitors > 0 && <Visitors />}
+        {visitors > 0 && <Visitors visitors={visitors} />}
       </Suspense>
     </div>
   );
@@ -61,12 +61,12 @@ const styles = {
     marginTop: "46vh",
   },
   visitors: {
-    textAlign: "center",
-    borderRadius: "3rem",
-    backgroundColor: "red",
+    borderRadius: "1rem",
+    color: "white",
+    backgroundColor: "#FD5F00",
     position: "fixed",
-    width: "1.8rem",
-    height: "1.8rem",
+    boxShadow: "0 0 .2rem .2rem rgb(10, 10, 255, .2)",
+    padding: "0.2rem .5rem",
     right: "3rem",
     bottom: "2rem",
   },
