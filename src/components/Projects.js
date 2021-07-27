@@ -1,5 +1,5 @@
 import React from "react";
-import {  makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import parse from "html-react-parser";
 import db from "../db/db.json";
 
@@ -14,8 +14,8 @@ export default function Projects() {
         <h2 className={classes.root}>PROJECTS</h2>
         <hr />
         <div className={classes.projects}>
-          {db?.projects.map((val) => (
-            <div className={classes.card}>
+          {db?.projects.map((val, index) => (
+            <div className={classes.card} key={index.toString()}>
               <h2>
                 <a
                   href={val?.appLink}

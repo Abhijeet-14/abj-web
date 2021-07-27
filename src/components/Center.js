@@ -52,7 +52,9 @@ function Center(props) {
               <span className={classes._orange}>.</span>
             </Card.Title>
             <Card.Text className="my-3" style={styles.text}>
-              <div>FULL-STACK DEVELOPER ( Web )</div>
+              FULL STACK DEVELOPER ( Web )
+            </Card.Text>
+            <Card.Text className="mb-3" style={styles.text}>
               <Card.Link
                 target="_blank"
                 href={db?.resume}

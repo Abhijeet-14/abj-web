@@ -18,7 +18,12 @@ export default function About(props) {
   );
 
   return (
-    <Container className="py-5 mt-0" id="about" fluid style={{scrollBehavior: "smooth"}}>
+    <Container
+      className="py-5 mt-0"
+      id="about"
+      fluid
+      style={{ scrollBehavior: "smooth" }}
+    >
       <h2 className="my-4 d-flex justify-content-center" style={styles.about}>
         {" "}
         ABOUT ME
@@ -73,8 +78,12 @@ export default function About(props) {
             style={{ height: ".1em", backgroundColor: "#05004E" }}
           ></div>
           <div className="mx-sm-4 mt-sm-4 my-4 text-center d-flex justify-content-between">
-            {db?.aboutMe?.contacts?.map(({ name, detail }) => (
-              <Card className="mx-sm-4 mt-3 mt-sm-0" style={styles.card}>
+            {db?.aboutMe?.contacts?.map(({ name, detail }, index) => (
+              <Card
+                className="mx-sm-4 mt-3 mt-sm-0"
+                style={styles.card}
+                key={index.toString()}
+              >
                 <Card.Title style={styles.title}>{parse(name)}</Card.Title>
                 <Card.Text style={styles.text}> {parse(detail)}</Card.Text>
               </Card>
